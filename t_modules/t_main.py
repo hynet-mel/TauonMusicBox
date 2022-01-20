@@ -21350,6 +21350,11 @@ broadcast_icon.colour = [171, 102, 249, 255]
 broadcast_icon.colour_callback = broadcast_colour
 x_menu.add(_("Start Broadcast"), toggle_broadcast, broadcast_deco, icon=broadcast_icon)
 
+# Chromecast & Dlna cast button
+cast_icon = MenuIcon(asset_loader('cast.png', True))
+cast_icon.colour = [171, 102, 249, 255]
+cast_icon.colour_callback = broadcast_colour
+x_menu.add(_("Cast to..."), placeholder, placeholder, icon=cast_icon)
 
 def clear_queue():
     pctl.force_queue = []
